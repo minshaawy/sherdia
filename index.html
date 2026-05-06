@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>د. عبدالله محمد شردية — طبيب أسنان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f2722;
+    --ink-soft: #3a4f4a;
+    --ink-muted: #6b7d78;
+    --paper: #f6f3eb;
+    --paper-warm: #ece6d6;
+    --sage: #6b8a7a;
+    --sage-deep: #3d5a4f;
+    --accent: #c9a96e;
+    --whatsapp: #25d366;
+    --whatsapp-deep: #128c7e;
+    --line: rgba(15, 39, 34, 0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-weight: 400;
+    font-size: 16px;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(107, 138, 122, 0.08), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(201, 169, 110, 0.06), transparent 40%);
+  }
+
+  .latin { font-family: 'Inter', sans-serif; }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* ============ NAV ============ */
+  nav {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(246, 243, 235, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .logo-text small {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.6rem 1.1rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-cta:hover {
+    background: var(--sage-deep);
+    transform: translateY(-1px);
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 6rem 1.2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--sage-deep);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    margin-bottom: 1.2rem;
+    color: var(--ink);
+    word-wrap: break-word;
+  }
+
+  .hero h1 span.highlight {
+    color: var(--sage-deep);
+    font-weight: 700;
+  }
+
+  .hero p.subtitle {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.8rem;
+    line-height: 1.85;
+    font-weight: 400;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: var(--whatsapp);
+    color: white;
+    padding: 0.95rem 1.5rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .btn-primary:hover, .btn-primary:active {
+    background: var(--whatsapp-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: transparent;
+    color: var(--ink);
+    padding: 0.95rem 1.5rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid var(--line);
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .btn-secondary:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  /* Hero visual - doctor portrait */
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    max-height: 600px;
+    margin: 0 auto;
+    max-width: 340px;
+  }
+
+  .hero-portrait {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3d5a4f 0%, #0f2722 100%);
+    box-shadow: 0 16px 40px rgba(15, 39, 34, 0.18);
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-portrait .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(246, 243, 235, 0.5);
+    gap: 0.8rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .hero-portrait .placeholder svg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+  }
+
+  .hero-portrait .placeholder p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .hero-portrait .placeholder code {
+    background: rgba(246, 243, 235, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-family: 'Inter', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    direction: ltr;
+  }
+
+  /* Floating info card */
+  .hero-info-card {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    background: rgba(15, 39, 34, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    color: var(--paper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(246, 243, 235, 0.1);
+  }
+
+  .hero-info-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .hero-info-role {
+    font-size: 0.78rem;
+    color: rgba(246, 243, 235, 0.65);
+    margin-top: 0.15rem;
+  }
+
+  .hero-info-badge {
+    background: var(--accent);
+    color: var(--ink);
+    padding: 0.4rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ============ TRUST BAR ============ */
+  .trust-bar {
+    padding: 1.8rem 1.2rem;
+    background: var(--paper-warm);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .trust-bar-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .trust-item .num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .trust-item .label {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  /* ============ SERVICES ============ */
+  .services {
+    padding: 4rem 1.2rem;
+    position: relative;
+  }
+
+  .section-header {
+    max-width: 1400px;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .section-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+  }
+
+  .section-title span.highlight {
+    color: var(--sage-deep);
+    font-weight: 700;
+  }
+
+  .section-desc {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.85;
+  }
+
+  .services-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    background: var(--paper-warm);
+    padding: 1.8rem 1.4rem;
+    border-radius: 18px;
+    border: 1px solid transparent;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(15, 39, 34, 0.08);
+    border-color: var(--line);
+    background: var(--paper);
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--sage);
+    margin-bottom: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .service-card h3 {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .service-card p {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  /* ============ DOCTOR ============ */
+  .doctor {
+    padding: 4rem 1.2rem;
+    background: var(--paper-warm);
+  }
+
+  .doctor-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .doctor-portrait-wrap {
+    position: relative;
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .doctor-portrait {
+    aspect-ratio: 9/16;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3d5a4f 0%, #0f2722 100%);
+    position: relative;
+    box-shadow: 0 16px 40px rgba(15, 39, 34, 0.15);
+  }
+
+  .doctor-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .doctor-portrait .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(246, 243, 235, 0.4);
+    gap: 0.8rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .doctor-portrait .placeholder svg {
+    width: 55px;
+    height: 55px;
+    opacity: 0.4;
+  }
+
+  .doctor-portrait .placeholder p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: rgba(246, 243, 235, 0.5);
+  }
+
+  .doctor-portrait .placeholder code {
+    background: rgba(246, 243, 235, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-family: 'Inter', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    direction: ltr;
+  }
+
+  .doctor-badge {
+    position: absolute;
+    bottom: -1rem;
+    left: 1rem;
+    background: var(--accent);
+    padding: 0.9rem 1.2rem;
+    border-radius: 14px;
+    color: var(--ink);
+    box-shadow: 0 8px 20px rgba(15, 39, 34, 0.15);
+  }
+
+  .doctor-badge-num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .doctor-badge-text {
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+  }
+
+  .doctor-content .eyebrow { margin-bottom: 1rem; }
+
+  .doctor-content h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+    letter-spacing: -0.005em;
+  }
+
+  .doctor-content h2 span.role {
+    display: block;
+    color: var(--sage-deep);
+    font-weight: 500;
+    font-size: 0.7em;
+    margin-top: 0.3rem;
+  }
+
+  .doctor-content > p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.95;
+    margin-bottom: 1.5rem;
+  }
+
+  .credentials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    list-style: none;
+  }
+
+  .credentials li {
+    padding: 0.85rem 1rem;
+    background: var(--paper);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    line-height: 1.5;
+  }
+
+  .credentials li::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  /* ============ BRANCHES ============ */
+  .branches {
+    padding: 4rem 1.2rem;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .branches::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.08), transparent 70%);
+    pointer-events: none;
+  }
+
+  .branches-header {
+    max-width: 1400px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+  }
+
+  .branches-header .eyebrow { color: var(--accent); }
+
+  .branches-header h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+  }
+
+  .branches-header h2 span.highlight {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .branches-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    position: relative;
+  }
+
+  .branch-card {
+    background: rgba(246, 243, 235, 0.04);
+    border: 1px solid rgba(246, 243, 235, 0.1);
+    border-radius: 20px;
+    padding: 1.8rem 1.4rem;
+    transition: all 0.4s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .branch-card:hover {
+    background: rgba(246, 243, 235, 0.08);
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+
+  .branch-tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .branch-card h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--paper);
+    line-height: 1.4;
+  }
+
+  .branch-info {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .branch-info li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(246, 243, 235, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .branch-info li:last-child { border-bottom: none; }
+
+  .branch-info .label {
+    color: rgba(246, 243, 235, 0.5);
+    font-size: 0.8rem;
+    min-width: 70px;
+    flex-shrink: 0;
+  }
+
+  .branch-info .value {
+    color: var(--paper);
+    text-align: left;
+    line-height: 1.7;
+    word-break: break-word;
+  }
+
+  .branch-info a.value {
+    text-decoration: none;
+    color: var(--paper);
+    transition: color 0.3s;
+  }
+
+  .branch-info a.value:hover { color: var(--accent); }
+
+  .branch-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .branch-btn {
+    flex: 1;
+    min-width: 110px;
+    text-align: center;
+    padding: 0.85rem 0.8rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .branch-btn.whatsapp {
+    background: var(--whatsapp);
+    color: white;
+  }
+
+  .branch-btn.whatsapp:hover { background: var(--whatsapp-deep); }
+
+  .branch-btn.map {
+    background: transparent;
+    color: var(--paper);
+    border: 1px solid rgba(246, 243, 235, 0.25);
+  }
+
+  .branch-btn.map:hover {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
+  }
+
+  /* ============ CTA ============ */
+  .cta {
+    padding: 4rem 1.2rem 6rem;
+    text-align: center;
+    background: var(--paper-warm);
+  }
+
+  .cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+    letter-spacing: -0.005em;
+  }
+
+  .cta h2 span.highlight {
+    color: var(--sage-deep);
+    font-weight: 700;
+  }
+
+  .cta p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.8rem;
+    line-height: 1.85;
+  }
+
+  .cta .btn-primary {
+    font-size: 1rem;
+    padding: 1.05rem 2rem;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    padding: 2rem 1.2rem;
+    background: var(--ink);
+    color: rgba(246, 243, 235, 0.6);
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  footer .accent { color: var(--accent); }
+
+  /* ============ FLOATING WHATSAPP ============ */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    width: 54px;
+    height: 54px;
+    background: var(--whatsapp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    transition: all 0.3s;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0); }
+  }
+
+  .floating-whatsapp:hover, .floating-whatsapp:active {
+    transform: scale(1.08);
+    background: var(--whatsapp-deep);
+  }
+
+  .floating-whatsapp svg { width: 28px; height: 28px; }
+
+  /* ====================================================
+     TABLET (>= 640px)
+     ==================================================== */
+  @media (min-width: 640px) {
+    .hero {
+      padding: 7rem 2rem 4rem;
+    }
+
+    .hero h1 { font-size: 2.2rem; }
+    .hero p.subtitle { font-size: 1.05rem; }
+
+    .trust-bar { padding: 2rem 2rem; }
+    .trust-bar-inner {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .trust-item .num { font-size: 1.9rem; }
+
+    .services, .branches, .cta { padding: 5rem 2rem; }
+    .doctor { padding: 5rem 2rem; }
+
+    .section-title, .branches-header h2, .cta h2, .doctor-content h2 {
+      font-size: 2rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    .branches-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .branch-card { padding: 2.2rem; }
+
+    .credentials { grid-template-columns: repeat(2, 1fr); }
+
+    .doctor-content h2 { font-size: 1.8rem; }
+
+    .cta .btn-primary { width: auto; }
+  }
+
+  /* ====================================================
+     DESKTOP (>= 968px)
+     ==================================================== */
+  @media (min-width: 968px) {
+    nav {
+      padding: 1.1rem 3rem;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .logo-text { font-size: 1rem; }
+    .logo-text small { font-size: 0.75rem; }
+
+    .nav-cta {
+      padding: 0.7rem 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 8rem 3rem 4rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+
+    .hero p.subtitle {
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { gap: 1rem; }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      flex: 0 0 auto;
+      padding: 1.05rem 2rem;
+      font-size: 1rem;
+    }
+
+    .hero-visual {
+      max-height: 700px;
+      max-width: 420px;
+      margin: 0;
+      justify-self: end;
+    }
+
+    .hero-portrait { border-radius: 24px; }
+
+    .hero-info-card {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      left: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+    }
+
+    .hero-info-name { font-size: 1.05rem; }
+    .hero-info-role { font-size: 0.85rem; }
+    .hero-info-badge {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.9rem;
+    }
+
+    .trust-bar { padding: 2rem 3rem; }
+    .trust-item .num { font-size: 2rem; }
+    .trust-item .label { font-size: 0.85rem; }
+
+    .services, .branches, .cta { padding: 6rem 3rem; }
+    .doctor { padding: 6rem 3rem; }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .section-title, .branches-header h2, .cta h2 {
+      font-size: 2.4rem;
+    }
+
+    .section-desc { font-size: 1rem; }
+
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card { padding: 2.2rem 1.8rem; }
+    .service-card h3 { font-size: 1.25rem; }
+    .service-card p { font-size: 0.95rem; }
+
+    .doctor-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .doctor-portrait-wrap { max-width: 420px; }
+
+    .doctor-badge {
+      bottom: -1.5rem;
+      right: -1.5rem;
+      left: auto;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+    }
+
+    .doctor-badge-num { font-size: 2.2rem; }
+    .doctor-badge-text { font-size: 0.85rem; }
+
+    .doctor-content h2 { font-size: 2.2rem; }
+    .doctor-content > p { font-size: 1.02rem; }
+
+    .credentials li {
+      padding: 1rem 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .branches-header { margin-bottom: 4rem; }
+    .branches-header h2 { max-width: 800px; }
+
+    .branches-grid { gap: 2rem; }
+    .branch-card { padding: 2.5rem; }
+    .branch-card h3 { font-size: 1.5rem; }
+
+    .cta p { font-size: 1.05rem; margin-bottom: 2.5rem; }
+    .cta .btn-primary {
+      font-size: 1.05rem;
+      padding: 1.2rem 2.5rem;
+    }
+
+    footer { padding: 3rem; font-size: 0.9rem; }
+
+    .floating-whatsapp {
+      bottom: 2rem;
+      left: 2rem;
+      width: 60px;
+      height: 60px;
+    }
+    .floating-whatsapp svg { width: 32px; height: 32px; }
+  }
+
+  /* Subtle entrance */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * { animation: fadeUp 0.8s ease-out backwards; }
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-visual { animation: fadeUp 1s ease-out 0.5s backwards; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-mark">ع</div>
+    <div class="logo-text">
+      د. عبدالله شردية
+      <small>عيادة أسنان</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">الخدمات</a></li>
+    <li><a href="#doctor">عن الدكتور</a></li>
+    <li><a href="#branches">الفروع</a></li>
+  </ul>
+  <a href="https://wa.me/201023282361" target="_blank" class="nav-cta">احجز موعد</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">عيادة أسنان متخصصة</div>
+    <h1>ابتسامتك <span class="highlight">تستحق</span> أعلى مستوى من العناية الطبية</h1>
+    <p class="subtitle">د. عبدالله محمد شردية — طبيب أسنان متخصص، يقدم رعاية متكاملة لأسنانك في بيئة هادئة باستخدام أحدث التقنيات الطبية.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/201023282361?text=السلام%20عليكم،%20عايز%20أحجز%20موعد%20في%20العيادة" target="_blank" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+        تواصل عبر واتساب
+      </a>
+      <a href="#branches" class="btn-secondary">
+        شوف الفروع
+        <span style="transform: scaleX(-1)">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-portrait">
+      <img src="doctor.jpg" alt="د. عبدالله محمد شردية" />
+
+      <div class="hero-info-card">
+        <div>
+          <div class="hero-info-name">د. عبدالله شردية</div>
+          <div class="hero-info-role">طبيب أسنان متخصص</div>
+        </div>
+        <div class="hero-info-badge">+7 سنوات</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="num latin">+7</div>
+      <div class="label">سنوات من الخبرة</div>
+    </div>
+    <div class="trust-item">
+      <div class="num latin">+5,000</div>
+      <div class="label">حالة ناجحة</div>
+    </div>
+    <div class="trust-item">
+      <div class="num latin">2</div>
+      <div class="label">فروع لخدمتك</div>
+    </div>
+    <div class="trust-item">
+      <div class="num latin">98%</div>
+      <div class="label">نسبة رضا المرضى</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <h2 class="section-title">خدمات طبية <span class="highlight">متخصصة</span> لكل احتياجاتك</h2>
+    <p class="section-desc">من الفحص الدوري والتنظيف إلى الإجراءات التجميلية والتركيبات المتقدمة — نقدم رعاية شاملة لأسنانك في مكان واحد بأحدث التقنيات.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">— 01</div>
+      <h3>تجميل الأسنان</h3>
+      <p>قشور التجميل (Veneers)، تبييض الأسنان، وإعادة تشكيل الابتسامة بأحدث التقنيات للحصول على ابتسامة طبيعية ومتناسقة.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">— 02</div>
+      <h3>زراعة الأسنان</h3>
+      <p>زراعة فورية ومتأخرة باستخدام أفضل أنواع الزرعات السويسرية والألمانية، مع ضمان طويل الأمد ومتابعة مستمرة.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">— 03</div>
+      <h3>التركيبات الثابتة والمتحركة</h3>
+      <p>تيجان وجسور بتقنية الزيركون والإيماكس، وأطقم متحركة مرنة بمعايير دقيقة تضمن الراحة والمظهر الطبيعي.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">— 04</div>
+      <h3>علاج العصب والحشوات</h3>
+      <p>علاج جذور الأسنان بأحدث أجهزة المايكروسكوب، وحشوات تجميلية بلون الأسنان الطبيعية تدوم لسنوات.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">— 05</div>
+      <h3>تقويم الأسنان</h3>
+      <p>تقويم معدني، شفاف، ومتحرك (Invisalign) لتصحيح اعوجاج الأسنان وإعطائك ابتسامة منتظمة بأقل وقت ممكن.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">— 06</div>
+      <h3>طب أسنان الأطفال</h3>
+      <p>عناية متخصصة لأسنان الأطفال في بيئة ودودة وآمنة، تشمل الفحص الوقائي، الفلورايد، والحشوات الملونة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor" id="doctor">
+  <div class="doctor-inner">
+    <div class="doctor-portrait-wrap">
+      <div class="doctor-portrait">
+        <img src="doctor.jpg" alt="د. عبدالله محمد شردية" />
+      </div>
+      <div class="doctor-badge">
+        <div class="doctor-badge-num latin">+5K</div>
+        <div class="doctor-badge-text">مريض راضٍ</div>
+      </div>
+    </div>
+
+    <div class="doctor-content">
+      <div class="eyebrow">تعرف على الدكتور</div>
+      <h2>د. عبدالله محمد شردية<span class="role">طبيب أسنان متخصص</span></h2>
+      <p>طبيب أسنان متخصص في طب وجراحة الفم والأسنان، بخبرة أكثر من ٧ سنوات في تجميل وزراعة الأسنان. يؤمن د. عبدالله بأن العلاج الطبي الناجح يبدأ من فهم المريض والإستماع له، ولذلك يحرص على تخصيص خطة علاجية لكل حالة على حدة بأعلى المعايير الطبية.</p>
+      <ul class="credentials">
+        <li>بكالوريوس طب وجراحة الفم والأسنان</li>
+        <li>عضو نقابة أطباء الأسنان</li>
+        <li>متخصص في زراعة الأسنان</li>
+        <li>دورات معتمدة في التجميل</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="branches" id="branches">
+  <div class="branches-header">
+    <div class="eyebrow">فروعنا</div>
+    <h2>اختار <span class="highlight">الفرع الأقرب</span> ليك واحجز موعدك</h2>
+  </div>
+
+  <div class="branches-grid">
+    <!-- BRANCH 1 -->
+    <div class="branch-card">
+      <div class="branch-tag">— الفرع الأول</div>
+      <h3>City Dental Clinic</h3>
+      <ul class="branch-info">
+        <li>
+          <span class="label">العنوان</span>
+          <span class="value">[العنوان التفصيلي للفرع الأول]</span>
+        </li>
+        <li>
+          <span class="label">تليفون</span>
+          <a href="tel:+201023282361" class="value latin" dir="ltr">0102 328 2361</a>
+        </li>
+        <li>
+          <span class="label">المواعيد</span>
+          <span class="value">يومياً ١٢ ظهراً — ١٠ مساءً<br/>(الجمعة إجازة)</span>
+        </li>
+      </ul>
+      <div class="branch-actions">
+        <a href="https://wa.me/201023282361?text=السلام%20عليكم،%20عايز%20أحجز%20موعد%20في%20فرع%20City%20Dental%20Clinic" target="_blank" class="branch-btn whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+          واتساب
+        </a>
+        <a href="https://maps.app.goo.gl/JNqTKjRrJGR4BKUB6" target="_blank" class="branch-btn map">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          الموقع
+        </a>
+      </div>
+    </div>
+
+    <!-- BRANCH 2 -->
+    <div class="branch-card">
+      <div class="branch-tag">— الفرع الثاني</div>
+      <h3>الفرع الثاني</h3>
+      <ul class="branch-info">
+        <li>
+          <span class="label">العنوان</span>
+          <span class="value">[العنوان التفصيلي للفرع الثاني]</span>
+        </li>
+        <li>
+          <span class="label">تليفون</span>
+          <a href="tel:+201023282361" class="value latin" dir="ltr">0102 328 2361</a>
+        </li>
+        <li>
+          <span class="label">المواعيد</span>
+          <span class="value">يومياً ١٢ ظهراً — ١٠ مساءً<br/>(الجمعة إجازة)</span>
+        </li>
+      </ul>
+      <div class="branch-actions">
+        <a href="https://wa.me/201023282361?text=السلام%20عليكم،%20عايز%20أحجز%20موعد%20في%20الفرع%20الثاني" target="_blank" class="branch-btn whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+          واتساب
+        </a>
+        <a href="#" class="branch-btn map">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          الموقع
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>جاهز <span class="highlight">تبدأ رحلة العلاج</span>؟</h2>
+    <p>تواصل معانا الآن عبر الواتساب لحجز موعدك في أقرب فرع — هنرد عليك في أسرع وقت.</p>
+    <a href="https://wa.me/201023282361?text=السلام%20عليكم،%20عايز%20أحجز%20موعد%20في%20العيادة" target="_blank" class="btn-primary">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+      احجز موعد عبر واتساب
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>عيادة د. عبدالله محمد شردية © 2026 — صُنع <span class="accent">بعناية</span></p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/201023282361?text=السلام%20عليكم،%20عايز%20أحجز%20موعد%20في%20العيادة" target="_blank" class="floating-whatsapp" aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+</a>
+
+</body>
+</html>
